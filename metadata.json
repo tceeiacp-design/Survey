@@ -1,0 +1,7 @@
+{
+  "name": "EcoSurvey - Waste Management Tracker",
+  "description": "A comprehensive survey and waste audit tool for market waste management, featuring surveyor and admin dashboards with AI-powered insights.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
