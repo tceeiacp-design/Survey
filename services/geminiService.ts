@@ -31,8 +31,8 @@ export const getWasteInsights = async (surveyData: any[], auditData: any[]) => {
       contents: prompt,
     });
     
-    // Fix: Accessing the .text property directly instead of calling it as a method or using multiple nested response properties.
-    return response.text;
+    // Fix: Accessing the .text property directly. Added fallback '??' to ensure string return type, preventing TS2345 error.
+    return response.text ?? "No insights generated.";
   } catch (error) {
     console.error("Gemini Insight Generation Error:", error);
     return "Unable to generate insights at this time. Please review the raw dashboard data for manual analysis.";
